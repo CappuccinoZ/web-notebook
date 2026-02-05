@@ -39,5 +39,7 @@ export default defineConfig({
 	],
 	markdown: {
 		remarkPlugins: [remarkBreaks]
-	}
+	},
+	site: 'https://cappuccinoz.github.io',
+	base: '/web-notebook'
 });
