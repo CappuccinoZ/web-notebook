@@ -31,6 +31,7 @@ export default defineConfig({
 					items: [
 						{ label: 'JS 基础', slug: 'javascript/1' },
 						{ label: 'WEB APIs', slug: 'javascript/2' },
+						{ label: 'JS 进阶', slug: 'javascript/3' },
 						{ label: 'jQuery 笔记', slug: 'javascript/jquery' },
 					],
 				},
