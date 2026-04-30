@@ -1,6 +1,8 @@
 ---
 title: jQuery 笔记
 ---
+维护一些旧项目用
+
 ## jQuery下载
 我们可以进入[jquery.com](https://jquery.com/)下载jQuery文件，如`jquery-3.7.1.min.js`。
 在HTML文件中引入jQuery，放在自己写的js文件前面：
