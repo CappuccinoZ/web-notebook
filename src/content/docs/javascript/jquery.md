@@ -5,6 +5,7 @@ title: jQuery 笔记
 
 ## jQuery下载
 我们可以进入[jquery.com](https://jquery.com/)下载jQuery文件，如`jquery-3.7.1.min.js`。
+
 在HTML文件中引入jQuery，放在自己写的js文件前面：
 ```html
 <html>
@@ -74,6 +75,7 @@ $("#a p:eq(1) span:eq(2)")
 
 ## 悬停事件hover
 用`mouseenter`添加鼠标进入事件，`mouseleave`添加鼠标移出事件。
+
 可以用`hover`添加悬停事件，传入2个函数，对应鼠标进入和移出，例如：
 ```js
 $("#span1").hover(

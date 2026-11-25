@@ -2,15 +2,15 @@
 title: HTML5 语义标签
 ---
 
-## 准备
-### 开发工具
-- [TRAE AI编辑器](https://www.trae.cn/)
-- [谷歌浏览器](https://www.google.cn/chrome/)
+开发工具：
+- [TRAE编辑器](https://www.trae.cn/)
+- [Chrome浏览器](https://www.google.cn/chrome/)
 
-### 快捷键
-**开发者工具：** 浏览器右击"检查"或`F12`
+学习视频：[2025版pink老师最新AI+前端入门教程](https://www.bilibili.com/video/BV1MvaVzUEuz)
 
-**创建网页模板：** 英文感叹号`!`
+## 创建网页模板 
+快捷键：英文感叹号`!`
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -25,32 +25,22 @@ title: HTML5 语义标签
 </html>
 ```
 
-`<head>`： 文档元数据（头部）元素，可以设置标题和添加样式表
+## 标签
+| 标签            | 说明                    |
+| --------------- | ----------------------- |
+| `<h1>` - `<h6>` | 标题标签，建议在3级以内 |
+| `<p>`           | 段落标签                |
+| `<hr>`          | 水平分割线              |
+| `<br>`          | 换行标签                |
+| `<strong>`      | <strong>加粗</strong>   |
+| `<em>`          | <em>倾斜</em>           |
+| `<ins>`         | <ins>下划线</ins>       |
+| `<del>`         | <del>删除线</del>       |
 
-`<body>`： 文档主体元素，主要标签一般写在这里
+### 注释标签
+语法： `<!-- 注释内容 -->`
 
-## 标题与段落标签
-`<h1>`-`<h6>`： 标题标签，建议在3级以内
-
-`<p>`： 段落标签
-
-`<hr>`： 水平分割线
-
-`<br>`： 换行标签
-
-## 有语义强调与重要性标签
-`<strong>`： **加粗**
-
-`<em>`： *倾斜*
-
-`<ins>`： <ins>下划线</ins>
-
-`<del>`： ~~删除线~~
-
-## 注释标签
-**语法：** `<!-- 注释内容 -->`
-
-**快捷键：** `Ctrl + /`
+快捷键： `Ctrl + /`
 
 ## 区块元素和行内元素
 ###  区块元素
@@ -68,14 +58,12 @@ p标签不能嵌套区块元素
 - strong, em, a等
 
 ## 图像标签
-**语法：** `<img src="" alt="">`，是单标签
+语法： `<img src="" alt="">`，是单标签
 
-**属性：** src, alt, width, height, title
+属性： src, alt, width, height, title
 
 :::tip
-图片懒加载：可以用 `loading="lazy"`，同时设置  `width` 和 `height` 以防止布局偏移
-
-[loading属性说明](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Reference/Elements/img#loading)
+图片懒加载： 可以用 `loading="lazy"`，同时设置  `width` 和 `height`
 :::
 
 ## 路径
@@ -94,15 +82,15 @@ p标签不能嵌套区块元素
 
 ## 视频和音频
 ### 视频
-**语法：** `<video src=""></video>`
+语法： `<video src=""></video>`
 
-**属性：** src, controls, width, height, autoplay, loop, muted, poster
+属性： src, controls, width, height, autoplay, loop, muted, poster
 
 :::note
 视频标签想要自动播放，需要先静音；音频标签浏览器不让自动播放
 :::
 
-**兼容性写法：**
+兼容性写法：
 ```html
 <video controls>
   <source src="video.mp4" type="video/mp4">
@@ -111,11 +99,9 @@ p标签不能嵌套区块元素
 ```
 
 ### 音频
-**语法：** `<audio src=""></audio>`
+语法： `<audio src=""></audio>`
 
-**属性：** 与视频标签的属性类似
-
-**兼容性写法：**
+兼容性写法：
 ```html
 <audio controls>
   <source src="audio.mp3" type="audio/mp3">
@@ -124,16 +110,16 @@ p标签不能嵌套区块元素
 ```
 
 ## 链接标签
-**语法：** `<a href=""></a>`
+语法： `<a href=""></a>`
 
-**属性：** href, target, title
+属性： href, target, title
 
 - 新窗口打开： `target="_blank"`
 - 空链接： `href="#"`
 - 下载链接： `href="./download.zip"`
 - 邮件链接： `href="mailto:123@qq.com"`
 
-### 锚点链接
+锚点链接：
 1. 创建锚点目标： `id="1"`
 2. 标记锚点目标： `href="#1"`
 
@@ -143,74 +129,101 @@ p标签不能嵌套区块元素
 
 ## 网页结构标签和无语义标签
 ### 网页结构标签
-`<header>`： 网页页眉
-
-`<main>`： 网页内容
-
-`<nav>`： 导航栏
-
-`<article>`： 文章相关
-
-`<section>`： 分类
-
-`<aside>`： 侧边栏
-
-`<footer>`： 页面页脚
+| 标签        | 说明     |
+| ----------- | -------- |
+| `<header>`  | 网页页眉 |
+| `<main>`    | 网页内容 |
+| `<nav>`     | 导航栏   |
+| `<article>` | 文章相关 |
+| `<section>` | 分类     |
+| `<aside>`   | 侧边栏   |
+| `<footer>`  | 页面页脚 |
 
 ### 无语义标签
-`<div>`： 区块，布局结构
+`<div>`： 区块元素
 
-`<span>`： 行内，文本或行内元素
+`<span>`： 行内元素
 
-## 列表标签
-**有序列表：** `<ol>` 包含 `<li>`
+## 列表
+**有序列表：**
+```html
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+```
 
-**描述列表：** `<dl>` 包含 `<dt>` 和 `<dd>`（术语和描述）
+**描述列表：**
+```html
+<dl>
+  <dt>术语</dt>
+  <dd>描述</dd>
+</dl>
+```
 
-无序列表： `<ul>` 包含 `<li>`
+无序列表：
+```html
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+```
 
 ## 表格
-`<table>`： 表格容器
-
-`<tr>`： 表格行
-
-`<td>`： 单元格
-
-`<th>`： 表头单元格
+```html
+<table>
+  <tr>
+    <th>表头内容 1</th>
+    <th>表头内容 2</th>
+  </tr>
+  <tr>
+    <td>表格主体内容 1</td>
+    <td>表格主体内容 2</td>
+  </tr>
+</table>
+```
 
 表格结构标签： `<thead>`, `<tbody>`, `<tfoot>`
 
 ## 表单
-### 表单容器
-**语法：** `<form action=""></form>`
-
-**属性：** `action` 指定处理表单提交的URL
+表单容器： `<form action=""></form>`
 
 ### input表单
-**语法：** `<input type="">`
+语法： `<input type="">`
 
-**属性：** `type` 定义输入框的类型
-
-- 单行文本框（text），密码框（password），`autocomplete="off"` 关闭自动填充
-
-- 单选框（radio），复选框（checkbox），`checked` 属性默认选中
-
-- 文件域（file），`multiple` 属性多选，`accept` 属性规定类型
+| type     | 说明           | 其他属性                                                       |
+| -------- | -------------- | -------------------------------------------------------------- |
+| text     | **单行**文本框 | placeholder, name, maxlength, `autocomplete="off"`关闭自动填充 |
+| password | 密码框         | ……                                                             |
+| radio    | 单选框         | name, value, checked                                           |
+| checkbox | 复选框         | ……                                                             |
+| file     | 文件域         | multiple，accept                                               |
 
 ### textarea表单
-**语法：** `<textarea></textarea>`
+**多行**文本框
+
+语法： `<textarea></textarea>`
   
-**属性：** name, placeholder, rows, cols
+属性： name, placeholder, rows, cols
 
 ### select下拉表单
-`<select>`： 下拉表单容器
+语法：
+```html
+<select name="" id="">
+  <option value=""></option>
+  <option value=""></option>
+  <option value=""></option>
+</select>
+```
 
-`<option>`： 选项标签，`selected` 属性默认选中
+option属性： `selected`默认选中
 
 ### button按钮
-**语法：** `<button>搜索</button>`
+语法： `<button>搜索</button>`
 
-**属性：** `disabled` 禁用按钮
+属性： `disabled`禁用按钮
 
 ### label辅助标签
 方式一：
@@ -227,11 +240,6 @@ p标签不能嵌套区块元素
 ```
 
 ## 特殊字符
-空格： `&nbsp;`
-
-大于号： `&gt;`
-
-小于号： `&lt;`
-
-## 学习视频
-[2025版pink老师最新AI+前端入门教程](https://www.bilibili.com/video/BV1MvaVzUEuz)
+- 空格： `&nbsp;`
+- 大于号： `&gt;`
+- 小于号： `&lt;`
