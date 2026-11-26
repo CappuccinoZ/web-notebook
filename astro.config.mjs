@@ -24,6 +24,7 @@ export default defineConfig({
 						{ label: '交互动效设计', slug: 'css3/3' },
 						{ label: '前沿技术拓展', slug: 'css3/4' },
 						{ label: '移动网页与响应网页开发', slug: 'css3/5' },
+						{ label: 'Tailwind CSS', slug: 'css3/tailwind' },
 					],
 				},
 				{
@@ -39,6 +40,6 @@ export default defineConfig({
 		}),
 	],
 	markdown: {
-		remarkPlugins: [remarkBreaks]
+		remarkPlugins: []
 	}
 });
